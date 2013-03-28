@@ -1,14 +1,11 @@
-<h1>Ember App</h1>
-
-<nav>
-  <ul>
-    <li>{{#linkTo "index"}}Home{{/linkTo}}</li>
-  </ul>
-</nav>
-
-<div {{action "test" target="controller"}}>
-  alert me
+<div class="application-header">
+  <div class="container">
+    header
+  </div>
 </div>
 
-{{outlet}}
-
+<div class="application-content">
+  <div class="container">
+    {{outlet}}
+  </div>
+</div>
