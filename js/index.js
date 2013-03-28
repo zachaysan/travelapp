@@ -11,6 +11,8 @@ var App = window.App = require('./app');
 
 App.Store = require('./store');
 
+App.ApplicationController = require('./controllers/application_controller');
+App.IndexRoute = require('./routes/index_route');
 
 require('./routes');
 
