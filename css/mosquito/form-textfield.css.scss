@@ -36,4 +36,10 @@ textarea {
     font-size: 16px;
     padding: 8px;
   }
+
+  &[disabled] {
+    background: #f3f3f3;
+    color: #777777;
+    text-shadow: 1px 1px #ffffff;
+  }
 }

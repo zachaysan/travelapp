@@ -29,4 +29,18 @@ $experimental-support-for-svg: true;
       @include background-image(linear-gradient(top,  #eae7da 0%,#f6f4ea 100%));
     }
   }
+
+  .message {
+    margin-top: 140px;
+    color: #a7a28b;
+
+    a {
+      color: #a7a28b;
+      text-decoration: underline;
+
+      &:hover {
+        color: #736e54;
+      }
+    }
+  }
 }
