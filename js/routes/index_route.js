@@ -1,6 +1,6 @@
 var IndexRoute = Ember.Route.extend({
-  setupController: function(controller) {
-    console.log("setting up index controller");
+  setupController: function(controller, modal) {
+
   }
 });
 

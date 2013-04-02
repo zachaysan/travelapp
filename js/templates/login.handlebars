@@ -1,0 +1,26 @@
+<form>
+  <div class="mq-formrow">
+    <div class="mq-formfield" style="width: 200px;">
+      {{view Ember.TextField valueBinding="email" placeholder="Email Address"}}
+    </div>
+
+    <div class="mq-formfield" style="width: 200px;">
+      {{view Ember.TextField valueBinding="password" placeholder="Password" type="password"}}
+    </div>
+
+    <div class="mq-formfield">
+      <button {{action login}} class="mq-button mq-raised mq-medium mq-blue" type="submit">
+        <div class="mq-wrapper">
+          <i>Login</i>
+        </div>
+      </button>
+      {{#if errorMessage}}
+        <div class="mq-error mq-top">
+          <div class="mq-wrapper">
+            {{errorMessage}}
+          </div>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</form>

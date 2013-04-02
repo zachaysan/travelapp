@@ -5,8 +5,12 @@
     </ul>
 
     <ul class="right">
-      <li>{{#linkTo "signup"}}Sign Up{{/linkTo}}</li>
-      <li><a href="#">Log In</a></li>
+      {{#if currentUser}}
+        <li><a href="#" {{action "logOut"}}>Log Out</a></li>
+      {{else}}
+        <li>{{#linkTo "signup"}}Sign Up{{/linkTo}}</li>
+        <li>{{#linkTo "login"}}Log In{{/linkTo}}</li>
+      {{/if}}
       <li>
         <div class="mq-button mq-raised mq-medium mq-orange">
           <div class="mq-wrapper">

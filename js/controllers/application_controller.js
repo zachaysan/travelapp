@@ -1,13 +1,9 @@
 var ApplicationController = Ember.Controller.extend({
+  currentUser: false, // if a current user logged in
 
-  test: function() {
-    var TestObject = Parse.Object.extend("TestObject");
-    var testObject = new TestObject();
-    testObject.save({foo: "bar"}, {
-      success: function(object) {
-        alert("yay! it worked");
-      }
-    });
+  logOut: function() {
+    Parse.User.logOut();
+    this.set("currentUser", false);
   }
 });
 
