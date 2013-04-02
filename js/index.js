@@ -12,7 +12,9 @@ var App = window.App = require('./app');
 App.Store = require('./store');
 
 App.ApplicationController = require('./controllers/application_controller');
+App.SignupController = require('./controllers/signup_controller');
 App.IndexRoute = require('./routes/index_route');
+App.SignupRoute = require('./routes/signup_route');
 
 require('./routes');
 

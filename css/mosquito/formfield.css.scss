@@ -1,0 +1,12 @@
+.mq-formrow {
+  margin-bottom: 10px;
+}
+
+.mq-formfield {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+  .mq-formfield > *:first-child {
+    display: block;
+  }
