@@ -6,6 +6,15 @@ body {
   color: #303030;
 }
 
+a {
+  text-decoration: none;
+  color: #1097d6;
+
+  &:hover {
+    color: #0e6187;
+  }
+}
+
 .container {
   width: 980px;
   margin: 0 auto;
