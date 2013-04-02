@@ -21,7 +21,7 @@ textarea {
   font-size: 12px;
   @include background-image(linear-gradient(top,  #f5f5f5 0%,#ffffff 18px,#ffffff 100%));
   width: 100%;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 
   &:focus {
     box-shadow:
