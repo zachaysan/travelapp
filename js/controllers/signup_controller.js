@@ -18,7 +18,7 @@ var SignupController = Ember.Controller.extend({
     user.signUp(null, {
       success: function(user) {
         that.set("application.currentUser", true);
-        that.transitionTo('index');
+        that.transitionToRoute('index');
       },
       error: function(user, error) {
         switch(error.code) {

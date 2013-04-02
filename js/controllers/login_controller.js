@@ -13,7 +13,7 @@ var LoginController = Ember.Controller.extend({
     Parse.User.logIn(this.get("email"), this.get("password"), {
       success: function(user) {
         that.set("application.currentUser", true);
-        that.transitionTo('index');
+        that.transitionToRoute('index');
       },
       error: function(user, error) {
         that.set("errorMessage", "Nope. Try again.")

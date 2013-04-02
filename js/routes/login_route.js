@@ -3,7 +3,7 @@ var LoginRoute = Ember.Route.extend({
     // If already a user logged in, redirect to index page
     var user = Parse.User.current();
     if (user) {
-      this.transitionTo('index');
+      this.transitionToRoute('index');
     }
 
     controller.setProperties({
