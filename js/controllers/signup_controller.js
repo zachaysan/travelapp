@@ -1,4 +1,7 @@
 var SignupController = Ember.Controller.extend({
+  needs: "application",
+  applicationBinding: "controllers.application",
+
   email: null,
   password: null,
   errorMessage: null,
@@ -14,7 +17,8 @@ var SignupController = Ember.Controller.extend({
     var that = this;
     user.signUp(null, {
       success: function(user) {
-        console.log("account created")
+        that.set("application.currentUser", true);
+        that.transitionTo('index');
       },
       error: function(user, error) {
         switch(error.code) {
