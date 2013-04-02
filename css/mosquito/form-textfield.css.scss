@@ -29,4 +29,11 @@ textarea {
       inset 1px 1px 4px rgba(0,0,0,0.25);
     border: solid 1px #66bbfc;
   }
+
+  /* size */
+  &.large {
+    height: 39px;
+    font-size: 16px;
+    padding: 8px;
+  }
 }
