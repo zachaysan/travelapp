@@ -1,26 +1,37 @@
-<form>
-  <div class="mq-formrow">
-    <div class="mq-formfield" style="width: 200px;">
-      {{view Ember.TextField valueBinding="email" placeholder="Email Address"}}
-    </div>
+<div class="login">
+  <h1>Welcome, new friend.</h1>
 
-    <div class="mq-formfield" style="width: 200px;">
-      {{view Ember.TextField valueBinding="password" placeholder="Password" type="password"}}
-    </div>
+  <div class="frame">
+    <div class="framewrapper">
 
-    <div class="mq-formfield">
-      <button {{action createAccount}} class="mq-button mq-raised mq-medium mq-blue" type="submit">
-        <div class="mq-wrapper">
-          <i>Create Account</i>
-        </div>
-      </button>
-      {{#if errorMessage}}
-        <div class="mq-error mq-top">
-          <div class="mq-wrapper">
-            {{errorMessage}}
+      <form>
+        <div class="mq-formrow">
+          <div class="mq-formfield" style="width: 240px;">
+            {{view Ember.TextField valueBinding="email" placeholder="Email Address" class="large"}}
+          </div>
+
+          <div class="mq-formfield" style="width: 240px;">
+            {{view Ember.TextField valueBinding="password" placeholder="Password" class="large" type="password"}}
+          </div>
+
+          <div class="mq-formfield">
+            <button {{action createAccount}} class="mq-button mq-raised mq-large mq-orange" type="submit">
+              <div class="mq-wrapper">
+                <i>Create Account</i>
+              </div>
+            </button>
+            {{#if errorMessage}}
+              <div class="mq-error mq-top">
+                <div class="mq-wrapper">
+                  {{errorMessage}}
+                </div>
+              </div>
+            {{/if}}
           </div>
         </div>
-      {{/if}}
+      </form>
+
     </div>
   </div>
-</form>
+
+</div>
