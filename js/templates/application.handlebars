@@ -5,13 +5,18 @@
     </ul>
 
     <ul class="right">
-      {{#if currentUser}}
-        <li><a href="#" {{action "logOut"}}>Log Out</a></li>
-      {{else}}
-        <li>{{#linkTo "signup"}}Sign Up{{/linkTo}}</li>
-        <li>{{#linkTo "login"}}Log In{{/linkTo}}</li>
-      {{/if}}
+      {{#unless currentUser}}
+        <li class="link">{{#linkTo "signup"}}Sign Up{{/linkTo}}</li>
+        <li class="link">{{#linkTo "login"}}Log In{{/linkTo}}</li>
+      {{/unless}}
       <li class="buttons">
+        {{#if currentUser}}
+          <div {{action logOut}} class="mq-button mq-raised mq-medium mq-white">
+            <div class="mq-wrapper">
+              <i>Logout</i>
+            </div>
+          </div>
+        {{/if}}
         <div class="mq-button mq-raised mq-medium mq-orange">
           <div class="mq-wrapper">
             <i>Add a Place</i>

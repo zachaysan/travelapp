@@ -30,7 +30,7 @@
     }
   }
 
-  a {
+  .link a {
     color: #777777;
     display: inline-block;
     border-radius: 20px;
@@ -47,5 +47,9 @@
   .logo a {
     font-size: 30px;
     color: #303030;
+
+    &:hover {
+      color: #1097d6;
+    }
   }
 }
