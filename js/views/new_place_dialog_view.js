@@ -1,6 +1,4 @@
 var NewPlaceDialogView = Ember.View.extend({
-  templateName: 'NewPlaceDialog',
-
   didInsertElement: function() {
     this.$().addClass('fadein');
     this.$().find('.dialog').position({

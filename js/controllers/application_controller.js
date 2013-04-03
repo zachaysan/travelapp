@@ -4,13 +4,6 @@ var ApplicationController = Ember.Controller.extend({
   logOut: function() {
     Parse.User.logOut();
     this.set("currentUser", false);
-  },
-
-  addPlace: function() {
-    var newPlaceDialogView = App.NewPlaceDialogView.create({
-      controller: App.NewPlaceDialogController
-    });
-    newPlaceDialogView.append();
   }
 });
 

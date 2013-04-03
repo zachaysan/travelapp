@@ -17,7 +17,7 @@
             </div>
           </div>
         {{/if}}
-        <div {{action addPlace}} class="mq-button mq-raised mq-medium mq-orange">
+        <div {{action showNewEventDialog}} class="mq-button mq-raised mq-medium mq-orange">
           <div class="mq-wrapper">
             <i>Add a Place</i>
           </div>
@@ -32,3 +32,5 @@
     {{outlet}}
   </div>
 </div>
+
+{{outlet modalOutlet}}

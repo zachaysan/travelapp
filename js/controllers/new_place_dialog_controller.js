@@ -1,6 +1,6 @@
 var NewPlaceDialogController = Ember.Controller.extend({
   name: 'test',
-  isProcessing: "true",
+  isProcessing: false,
 
   createPlace: function() {
     console.log("do stuff");

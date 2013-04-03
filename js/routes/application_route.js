@@ -5,6 +5,12 @@ var ApplicationRoute = Ember.Route.extend({
     if (user) {
       controller.set("currentUser", true);
     }
+  },
+
+  events: {
+    showNewEventDialog: function() {
+      this.render('newPlaceDialog');
+    }
   }
 });
 
