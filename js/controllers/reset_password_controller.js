@@ -21,14 +21,11 @@ var ResetPasswordController = Ember.Controller.extend({
       },
       error: function(error) {
         that.set("isProcessing", null);
-        switch(error.code) {
-          case 204:
-            that.set("errorMessage", "We need an email address to check!");
-          break;
 
-          default:
-            that.set("errorMessage", "There is no account with that email address.");
-          break;
+        if (that.get("email")) {
+          that.set("errorMessage", "There is no account with that email address.");
+        } else {
+          that.set("errorMessage", "We need an email address to check!");
         }
       }
     });
