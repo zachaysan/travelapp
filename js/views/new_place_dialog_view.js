@@ -6,10 +6,6 @@ var NewPlaceDialogView = Ember.View.extend({
       at: "center",
       of: ".dialogshadow"
     });
-  },
-
-  closeDialog: function() {
-    this.remove();
   }
 });
 

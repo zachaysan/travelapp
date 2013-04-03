@@ -9,7 +9,11 @@ var ApplicationRoute = Ember.Route.extend({
 
   events: {
     showNewEventDialog: function() {
-      this.render('newPlaceDialog');
+      this.render('newPlaceDialog', {into: 'application', outlet: 'modalOutlet'});
+    },
+
+    hideNewEventDialog: function() {
+      this.render('emptyTemplate', {into: 'application', outlet: 'modalOutlet'});
     }
   }
 });
