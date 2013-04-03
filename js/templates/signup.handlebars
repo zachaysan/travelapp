@@ -7,16 +7,21 @@
       <form>
         <div class="mq-formrow">
           <div class="mq-formfield" style="width: 240px;">
-            {{view Ember.TextField valueBinding="email" placeholder="Email Address" class="large"}}
+            {{view Ember.TextField valueBinding="email" disabledBinding="isProcessing" placeholder="Email Address" class="large"}}
           </div>
 
           <div class="mq-formfield" style="width: 240px;">
-            {{view Ember.TextField valueBinding="password" placeholder="Password" class="large" type="password"}}
+            {{view Ember.TextField valueBinding="password" disabledBinding="isProcessing" placeholder="Password" class="large" type="password"}}
           </div>
 
           <div class="mq-formfield">
-            <button {{action createAccount}} class="mq-button mq-raised mq-large mq-orange" type="submit">
+            <button {{action createAccount}} {{bindAttr loading="isProcessing"}} class="mq-button mq-raised mq-large mq-orange" type="submit">
               <div class="mq-wrapper">
+                <ul class="loading">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
                 <i>Create Account</i>
               </div>
             </button>

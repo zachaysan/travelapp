@@ -5,9 +5,13 @@ var SignupController = Ember.Controller.extend({
   email: null,
   password: null,
   errorMessage: null,
+  isProcessing: null,
 
   createAccount: function() {
-    this.set("errorMessage", null);
+    this.setProperties({
+      "errorMessage": null,
+      "isProcessing": "true"
+    });
 
     var user = new Parse.User();
     user.set("username", this.get("email"));
@@ -17,10 +21,14 @@ var SignupController = Ember.Controller.extend({
     var that = this;
     user.signUp(null, {
       success: function(user) {
-        that.set("application.currentUser", true);
+        that.setProperties({
+          "application.currentUser": true,
+          "isProcessing": null
+        });
         that.transitionToRoute('index');
       },
       error: function(user, error) {
+        that.set("isProcessing", null);
         switch(error.code) {
           case -1:
             that.set("errorMessage", "You are missing some information");
