@@ -13,6 +13,7 @@ App.Store = require('./store');
 
 App.ApplicationController = require('./controllers/application_controller');
 App.LoginController = require('./controllers/login_controller');
+App.NewPlaceDialogController = require('./controllers/new_place_dialog_controller');
 App.ResetPasswordController = require('./controllers/reset_password_controller');
 App.SignupController = require('./controllers/signup_controller');
 App.ApplicationRoute = require('./routes/application_route');
@@ -21,6 +22,7 @@ App.LoginRoute = require('./routes/login_route');
 App.ResetPasswordRoute = require('./routes/reset_password_route');
 App.SignupRoute = require('./routes/signup_route');
 App.LoginView = require('./views/login_view');
+App.NewPlaceDialogView = require('./views/new_place_dialog_view');
 App.ResetPasswordView = require('./views/reset_password_view');
 App.SignupView = require('./views/signup_view');
 

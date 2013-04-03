@@ -1,7 +1,3 @@
-var IndexRoute = Ember.Route.extend({
-  setupController: function(controller, modal) {
-
-  }
-});
+var IndexRoute = Ember.Route.extend();
 
 module.exports = IndexRoute;
