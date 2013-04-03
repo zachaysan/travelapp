@@ -1,15 +1,14 @@
 .application-header {
-  background: #303030;
+  background: #ffffff;
   padding: 20px 0;
-  line-height: 30px;
-  box-shadow: 0px 5px 0px rgba(0,0,0,0.2);
-  color: #e2e2e2;
+  line-height: 24px;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
   font-size: 15px;
   height: 30px;
 
   .left {
     float: left;
-    margin-left: -20px;
+    margin-left: -4px;
   }
 
   .right {
@@ -24,19 +23,29 @@
 
   li {
     display: inline-block;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 4px;
+
+    &.buttons {
+      margin-left: 10px;
+    }
   }
 
   a {
-    color: #e2e2e2;
+    color: #777777;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 0 8px;
+    margin-top: 3px;
+    vertical-align: middle;
 
     &:hover {
-      color: #edeba9;
+      color: #1097d6;
+      background: #dbf0f9;
     }
   }
 
   .logo a {
     font-size: 30px;
-    color: #ffffff;
+    color: #303030;
   }
 }

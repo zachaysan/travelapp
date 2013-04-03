@@ -5,18 +5,28 @@ var LoginController = Ember.Controller.extend({
   email: null,
   password: null,
   errorMessage: null,
+  isProcessing: null,
 
   login: function() {
-    this.set("errorMessage", null);
+    this.setProperties({
+      "errorMessage": null,
+      "isProcessing": "yes"
+    });
     that = this;
 
     Parse.User.logIn(this.get("email"), this.get("password"), {
       success: function(user) {
-        that.set("application.currentUser", true);
+        that.setProperties({
+          "application.currentUser": true,
+          "isProcessing": null
+        });
         that.transitionToRoute('index');
       },
       error: function(user, error) {
-        that.set("errorMessage", "Nope. Try again.")
+        that.setProperties({
+          "errorMessage": "Nope. Try again.",
+          "isProcessing": null
+        });
       }
     });
   }
