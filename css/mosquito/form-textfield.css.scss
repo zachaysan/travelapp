@@ -37,6 +37,12 @@ textarea {
     padding: 8px;
   }
 
+  &.huge {
+    height: 56px;
+    font-size: 26px;
+    padding: 12px;
+  }
+
   &[disabled] {
     background: #f3f3f3;
     color: #777777;

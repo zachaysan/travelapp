@@ -1,23 +1,33 @@
 <div class="dialogshadow">
   <div class="dialog">
 
-    <div class="dialogcontent">
-      content
-    </div>
-
-    <div class="dialogbuttons">
-      <div {{action createPlace}} class="mq-button mq-raised mq-large mq-orange">
-        <div class="mq-wrapper">
-          <i>Add Place</i>
+    <form>
+      <div class="dialogcontent newplacedialog">
+        <div class="formrow">
+          <div class="formfield">
+            <label for="name">Name the Place</label>
+            <p>
+              Try to give us the most widely used name there is for this place so we can make sure no duplicates get added.
+            </p>
+            {{view Ember.TextField valueBinding="name" disabledBinding="isProcessing" class="huge"}}
+          </div>
         </div>
       </div>
 
-      <div {{action closeDialog target="view"}} class="mq-button mq-raised mq-large mq-white">
-        <div class="mq-wrapper">
-          <i>Cancel</i>
+      <div class="dialogbuttons">
+        <button type="submit" {{action createPlace}} class="mq-button mq-raised mq-large mq-orange">
+          <div class="mq-wrapper">
+            <i>Add Place</i>
+          </div>
+        </button>
+
+        <div {{action closeDialog target="view"}} class="mq-button mq-raised mq-large mq-white">
+          <div class="mq-wrapper">
+            <i>Cancel</i>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
 
   </div>
 </div>
