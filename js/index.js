@@ -16,6 +16,7 @@ App.LoginController = require('./controllers/login_controller');
 App.NewPlaceDialogController = require('./controllers/new_place_dialog_controller');
 App.ResetPasswordController = require('./controllers/reset_password_controller');
 App.SignupController = require('./controllers/signup_controller');
+App.Place = require('./models/place');
 App.ApplicationRoute = require('./routes/application_route');
 App.IndexRoute = require('./routes/index_route');
 App.LoginRoute = require('./routes/login_route');

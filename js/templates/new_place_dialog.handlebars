@@ -18,14 +18,22 @@
         <div class="image">
           <div class="imagewrapper">
             {{#if image}}
-              <img src="" />
+              <img {{bindAttr src="image"}} />
             {{/if}}
             <div class="buttonpanel">
-              <div {{action addPhoto}} class="mq-button mq-raised mq-medium mq-white">
-                <div class="mq-wrapper">
-                  <i>Add a Photo</i>
+              {{#if image}}
+                <div {{action removeImage}} class="mq-button mq-raised mq-medium mq-white">
+                  <div class="mq-wrapper">
+                    <i>Remove</i>
+                  </div>
                 </div>
-              </div>
+              {{else}}
+                <div {{action addImage}} class="mq-button mq-raised mq-medium mq-white">
+                  <div class="mq-wrapper">
+                    <i>Add a Photo</i>
+                  </div>
+                </div>
+              {{/if}}
             </div>
           </div>
         </div>
