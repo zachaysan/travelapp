@@ -1,16 +1,16 @@
-var Place = DS.Model.extend({
-  name: DS.attr('string'),
-  image: DS.attr('string'),
+var Place = Ember.Object.extend({
+  name: null,
+  image: null,
 
-  country: DS.attr('string'),
-  state: DS.attr('string'),
-  city: DS.attr('string'),
-  street: DS.attr('string'),
-  gps: DS.attr('string'),
+  country: null,
+  state: null,
+  city: null,
+  street: null,
+  gps: null,
 
-  tags: DS.attr('string'),
+  tags: null,
 
-  author: DS.attr('string')
+  author: null
 });
 
 module.exports = Place;

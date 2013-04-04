@@ -6,6 +6,7 @@ var NewPlaceDialogView = Ember.View.extend({
       at: "center",
       of: ".dialogshadow"
     });
+    this.$().find('input:first').focus();
   }
 });
 

@@ -4,7 +4,7 @@ var NewPlaceDialogController = Ember.ObjectController.extend({
 
   init: function() {
     this._super();
-    this.set('content', App.Place.createRecord());
+    this.set('content', App.Place.create());
   },
 
   createPlace: function() {
@@ -17,11 +17,11 @@ var NewPlaceDialogController = Ember.ObjectController.extend({
 
     that = this;
     place.save(null, {
-      success: function(gameScore) {
-        // Create a new black place
-        that.set("content", App.Place.createRecord());
+      success: function(place) {
+        // TODO
+        that.set('content', App.Place.create());
       },
-      error: function(gameScore, error) {
+      error: function(place, error) {
         that.set("errorMessage", error.message);
       }
     });
