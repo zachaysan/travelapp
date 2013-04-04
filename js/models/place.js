@@ -10,6 +10,10 @@ var Place = Ember.Object.extend({
 
   tags: null,
 
+  isScenic: false,
+  isHistoric: false,
+  isCultural: false,
+
   author: null
 });
 
