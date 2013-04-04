@@ -14,7 +14,20 @@ var Place = Ember.Object.extend({
   isHistoric: false,
   isCultural: false,
 
-  author: null
+  author: null,
+
+  imageBackgroundStyle: function() {
+    return 'background-image: url(' + this.get('image') + ')';
+  }.property('image'),
+
+  locationSummary: function() {
+    var country = this.get("country");
+    var state = this.get("state");
+
+    if (state) state = ', ' + state;
+
+    return (country + state) || '&nbsp;';
+  }.property('country', 'state')
 });
 
 Place.reopenClass({

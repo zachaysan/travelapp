@@ -1,10 +1,18 @@
+.placeteaser-list {
+  margin-left: -15px;
+
+  li {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+}
+
 .placeteaser {
   border-radius: 5px;
   padding: 1px;
   background: #dddaca;
-  float: left;
   width: 308px;
-  margin-left: 15px;
   box-shadow: 0px 1px 2px rgba(0,0,0,0.13);
 
   .placeteaser-wrapper {
@@ -17,10 +25,12 @@
     overflow: hidden;
     width: 302px;
     height: 202px;
-    background: #f4f4f4 url("/images/interface.png") no-repeat 115px 67px;
+    background: #f4f4f4 url("/images/interface.png") no-repeat 114px 62px;
 
-    img {
-      width: 100%;
+    .scaler {
+      background-size: cover;
+      width: 302px;
+      height: 202px;
     }
   }
 

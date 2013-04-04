@@ -1,13 +1,15 @@
-{{#each content}}
-  <div class="placeteaser">
-    <div class="placeteaser-wrapper">
-      <div class="image">
-        <img {{bindAttr src="image"}}/>
+<ul class="placeteaser-list">
+  {{#each content}}
+    <li class="placeteaser">
+      <div class="placeteaser-wrapper">
+        <div class="image">
+          <div class="scaler" {{bindAttr style="imageBackgroundStyle"}}></div>
+        </div>
+        <div class="meta">
+          {{name}}
+          <span class="location">{{{locationSummary}}}</span>
+        </div>
       </div>
-      <div class="meta">
-        {{name}}
-        <span class="location">{{country}}, {{state}}</span>
-      </div>
-    </div>
-  </div>
-{{/each}}
+    </li>
+  {{/each}}
+</ul>
