@@ -12,6 +12,23 @@
             {{view Ember.TextField valueBinding="name" disabledBinding="isProcessing" class="huge"}}
           </div>
         </div>
+
+        <br /><br />
+
+        <div class="image">
+          <div class="imagewrapper">
+            {{#if image}}
+              <img src="" />
+            {{/if}}
+            <div class="buttonpanel">
+              <div {{action addPhoto}} class="mq-button mq-raised mq-medium mq-white">
+                <div class="mq-wrapper">
+                  <i>Add a Photo</i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="dialogbuttons">

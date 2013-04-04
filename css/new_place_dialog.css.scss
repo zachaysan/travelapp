@@ -1,5 +1,8 @@
+@import "compass";
+
 .newplacedialog {
   width: 680px;
+  overflow: auto;
 
   label {
     font-size: 15px;
@@ -8,5 +11,48 @@
 
   p {
     margin: 5px 0 10px 0;
+  }
+
+  .image {
+    width: 205px;
+    height: 205px;
+    background: #f4f4f4;
+    border: solid 3px #ffffff;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    position: relative;
+    @include rotate(3deg);
+    float: left;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 205px;
+      height: 205px;
+      background: #f4f4f4;
+      border: solid 3px #ffffff;
+      box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+      position: absolute;
+      @include rotate(-3deg);
+    }
+
+    .imagewrapper {
+      position: absolute;
+      width: 205px;
+      height: 205px;
+      @include rotate(-3deg);
+      margin: 3px;
+      text-align: center;
+
+      img {
+        max-width: 205px;
+        max-height: 205px;
+      }
+
+      .buttonpanel {
+        position: absolute;
+        width: 100%;
+        top: 130px;
+      }
+    }
   }
 }

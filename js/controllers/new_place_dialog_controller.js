@@ -1,6 +1,7 @@
 var NewPlaceDialogController = Ember.Controller.extend({
   name: null,
   country: null,
+  image: null,
 
   errorMessage: null,
   isProcessing: false,
