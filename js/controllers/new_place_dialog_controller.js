@@ -15,7 +15,7 @@ var NewPlaceDialogController = Ember.ObjectController.extend({
     place.set("image", this.get("image"));
     place.set("country", this.get("country"));
     place.set("state", this.get("state"));
-    place.set("tags", this.get("tags").split(','));
+    place.set("tags", (this.get("tags") || '').split(','));
     place.set("isScenic", this.get("isScenic"));
     place.set("isHistoric", this.get("isHistoric"));
     place.set("isCultural", this.get("isCultural"));

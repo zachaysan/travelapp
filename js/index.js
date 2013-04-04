@@ -12,6 +12,7 @@ var App = window.App = require('./app');
 App.Store = require('./store');
 
 App.ApplicationController = require('./controllers/application_controller');
+App.IndexController = require('./controllers/index_controller');
 App.LoginController = require('./controllers/login_controller');
 App.NewPlaceDialogController = require('./controllers/new_place_dialog_controller');
 App.ResetPasswordController = require('./controllers/reset_password_controller');

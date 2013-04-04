@@ -1,1 +1,13 @@
-Index Page
+{{#each content}}
+  <div class="placeteaser">
+    <div class="placeteaser-wrapper">
+      <div class="image">
+        <img {{bindAttr src="image"}}/>
+      </div>
+      <div class="meta">
+        {{name}}
+        <span class="location">{{country}}, {{state}}</span>
+      </div>
+    </div>
+  </div>
+{{/each}}
